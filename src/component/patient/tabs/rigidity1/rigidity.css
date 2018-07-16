@@ -1,0 +1,116 @@
+.rigidity-form .form-group{
+  display: table;
+  width: 100%;
+  text-align: center;
+}
+.rigidity-form .field-number{
+  padding: 10px;
+ }
+ .rigidity-form label{
+   display: table-cell;
+   vertical-align: middle;
+ }
+.rigidity-form select{
+   display: inline-block;
+   width: 65%;
+   background-color: #06569b;
+   color: #fff;
+   font-size: 16px;
+ }
+
+ .rigidity-form .zone-btns-area{
+  display: block;
+  padding: 15px;
+  position: relative;
+  border-bottom: 4px #fff solid;
+ }
+ .rigidity-form .zone-btns-area .title{
+  display: inline-block;
+  margin-right: 15%;
+  border-bottom: 1px #000 solid;
+ }
+ .rigidity-form .zone-btns-area .half{
+   width: 48%
+ }
+ .rigidity-form .zone-btns-area .inline-button {
+  display: inline-block;
+  margin-top: 10px;
+  margin-left: 1%;
+}
+
+.rigidity-form .zone-value-area{
+  height: 350px;
+  display: block;
+  padding: 15px;
+  position: relative;
+}
+.rigidity-form .zone-value-area .list-group{
+  top: 10px;
+  position: relative;
+}
+.rigidity-form .zone-value-area .list-group .list-item{
+  padding: 15px 10px;
+  text-align: center;
+}
+.rigidity-form .zone-value-area .list-item .max-label,
+.rigidity-form .zone-value-area .list-item .max-value,
+.rigidity-form .zone-value-area .list-item .value-value,
+.rigidity-form .zone-value-area .list-item .value-btns,
+.rigidity-form .zone-value-area .list-item .min-label,
+.rigidity-form .zone-value-area .list-item .min-value{
+  width: 48%;
+  display: inline-block;
+  padding: 5px 10px;
+  background: #E1F5FE;
+  margin-left: 2%;
+  border: 1px #06569b solid;
+  border-radius: 5px;
+}
+.rigidity-form .zone-value-area .list-item .value-btns{
+ border: 0px;
+ background: unset;
+}
+.rigidity-form .zone-value-area .list-item .value-btns .minus-btn,
+.rigidity-form .zone-value-area .list-item .value-btns .value,
+.rigidity-form .zone-value-area .list-item .value-btns .plus-btn{
+  display: inline-block;
+  width: 25%;
+  margin-left: 10%;
+}
+.rigidity-form .zone-value-area .list-item .value-btns .minus-btn{
+  margin-left: 0px;
+}
+.rigidity-form .zone-value-area .list-item .value-btns .value{
+  background: #06569b;
+  border: 1px #06569b solid;
+  border-radius: 4px;
+  height: 30px;
+  color: #fff;
+  position: relative;
+  top: 1px;
+}
+.rigidity-form .zone-value-area .list-item .value-btns .value span{
+  top: 4px;
+  position: relative;
+}
+
+
+.form-group.field.field-boolean.rigidity-lateralsupport > .checkbox > label {
+  width: 100%;
+  font-size: 18px;
+  padding-left: 15px !important;
+  padding-right: 15px;
+}
+
+input#root_lateralsupport {
+  position: inherit;
+  float: right;
+  width: 20%;
+}
+.form-group.field.field-boolean.rigidity-lateralsupport > .checkbox > label > span {
+  font-weight: 600;
+}
+
+input.form-control {
+  box-shadow: 0 0 0 0;
+} 

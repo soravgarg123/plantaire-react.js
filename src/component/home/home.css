@@ -1,0 +1,68 @@
+
+
+.tablestyle{
+    margin-left:30px;
+    margin-top:20px;
+}
+.header_right{
+    margin-top:20px;
+}
+li{
+    border-color: black;
+    border: solid 1px;
+}
+.tablestyle_content{
+    border-color: black;
+    border: solid 1px;
+}
+.header_title{
+    text-align: left;
+    border:solid 1px;
+    border-color: black;
+    background-color: gray;
+    height: 23px;
+}
+.logotitle{
+    font-size: 90px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+.logobox {
+    margin-top: 100px;
+}
+
+.home_buttons{
+    margin-top: 70px;
+}
+.orders{
+   
+    border-color: black;
+    height: 50px;
+    margin-top: 1px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+    background-color: gray;
+}
+
+.orders_patient_setting{
+    margin-top: 20px;
+    padding-left: 20px;
+    font-size: 16px;
+}
+
+.settings{
+   
+    border-color: black;
+    height: 50px;
+    margin-top: 370px;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 10px;
+    background-color: rgb(234, 32, 32);
+}
+
+.closeicon{
+    font-size: 40px;
+    margin-right: 5px;
+}

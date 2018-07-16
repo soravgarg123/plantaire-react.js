@@ -1,0 +1,106 @@
+.togle-btn-area{
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.togle-btn-area strong{
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  top: 10px;
+  font-weight: bolder;
+}
+.addons-form-area input, .addons-form-area select{
+  background-color: #06569b;
+  color: #fff;
+}
+.addons-form-area .label-left{
+  display: table;
+  width: 100%;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 18px;
+  padding-left: 15px;
+}
+.addons-form-area .label-left label {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: left;
+  width: 38%;
+  margin-bottom: 2px;
+  font-size: 18px
+}
+.addons-form-area .label-left input,
+.addons-form-area .label-left textarea,
+.addons-form-area .label-left select {
+  display: inline-block;
+}
+.addons-form-area .label-left div{
+  display: inline-block;
+}
+
+.addons-form-area  .position input{
+  width: 50%;
+}
+.addons-form-area .material select{
+  width: 70%;
+}
+.addons-form-area .lenght select{
+  width: 50%;
+}
+.addons-form-area .position label::before, 
+.addons-form-area .material label::before ,
+.addons-form-area .lenght label::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: rgb(52, 52, 52);
+  display: block;
+  border-radius: 50%;
+  float: left;
+  position: relative;
+  top: 10px;
+  margin-right: 20px;
+}
+.addons-form-area .fillangulation{
+  border-bottom: 4px #fff solid;
+}
+.addons-form-area .fillangulation select{
+  width: 80%;
+}
+.addons-form-area .pads{
+  border-bottom: 2px #fff solid;
+  min-height: 100px;
+}
+.addons-form-area .pads label{
+  vertical-align: super;
+}
+.addons-form-area .pads select{
+  width: 80%;
+}
+.addons-form-area .heelelevation select{
+  width: 40%;
+}
+.addons-form-area .heelelevationmaterial select{
+  width: 70%;
+}
+.addons-form-area .heelelevationmaterial label::before{
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: rgb(52, 52, 52);
+  display: block;
+  border-radius: 50%;
+  float: left;
+  position: relative;
+  top: 10px;
+  margin-right: 20px;
+}
+.addons-form-area .fillheelhole{
+  margin-bottom: 20px;
+}
+.addons-form-area .fillheelhole select{
+  width: 70%;
+}

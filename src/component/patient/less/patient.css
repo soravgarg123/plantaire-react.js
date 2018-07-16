@@ -1,0 +1,155 @@
+
+body{
+  background: #757575;
+  height: 100%;
+}
+
+.patient-tab-bar{
+  width: 80%;
+  margin: 0px auto;
+}
+.patient-tab-content{
+  justify-content: center;
+}
+.patient-tab-content .content-left, .patient-tab-content .content-right{
+  padding: 0px;
+}
+.patient-tab-content .content-center{
+  position: relative;
+  height: 700px;
+}
+.patient-tab-content .content-center .image-area {
+  position: absolute;
+  height: 80%;
+  top: 0px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+.patient-tab-content .content-center .action-area {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.form-group{
+  margin: 0px;
+}
+.disabled-filed select, .disabled-filed input{
+  background: #5959593b !important;
+  cursor: not-allowed;
+}
+.tab-button div {
+  background: #fff !important;
+  color: #000;
+}
+.tab-button-active div{
+  background: #00b0f2 !important;
+}
+.tab-button-done div{
+  background: #98d28b !important;  
+  color: #000;
+}
+
+#divToPDF .react-pdf__Page__canvas{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+
+
+/* = STEPS CONTAINER
+----------------------------*/
+.wizard-steps {
+  margin: 20px 10px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+.wizard-steps .step {
+  position:relative;
+}
+.wizard-steps div {
+  float: left; 
+margin-left: -12px;        
+}
+
+/* = DEFAULT STEPS
+----------------------------*/
+.wizard-steps a {
+  position:relative;
+  display:block;
+  height:48px;
+  padding:0px 10px 0px 3px;
+  float: left;
+  font-size:16px;
+  line-height:24px;
+  color:#000;
+  background: #fff;
+  text-decoration:none;
+  text-shadow:1px 1px 1px rgba(255,255,255, 0.8);
+  min-width: 130px;
+  text-align: center;
+}
+.wizard-steps a span{
+  position: relative;
+  top: 10px;
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+.wizard-steps .a-before {
+  width:0px;
+  height:0px;
+  border-top: 24px solid #fff;
+  border-bottom: 24px solid #fff;
+  border-left:24px solid transparent;
+
+}
+.wizard-steps .a-after {
+  width: 0;
+  height: 0;
+  border-top: 24px solid transparent;
+  border-bottom: 24px solid transparent;
+  border-left:24px solid #fff;
+  margin-left: 0;
+}
+
+/* = COMPLETED STEPS
+----------------------------*/
+
+.wizard-steps .completed-step a {
+  color:#000;
+  background: #98d28a;
+}
+.wizard-steps .completed-step .a-before {
+  border-top: 24px solid #98d28a;
+  border-bottom: 24px solid #98d28a;
+}
+.wizard-steps .completed-step .a-after {
+  border-left: 24px solid #98d28a;
+}
+
+/* = ACTIVE STEPS
+----------------------------*/
+.wizard-steps .active-step a {
+  color:#fff;
+  background: #00b0f2;
+  text-shadow:1px 1px 1px rgba(0,0,0, 0.8);
+}
+.wizard-steps .active-step .a-before {
+  border-top: 24px solid #00b0f2;
+  border-bottom: 24px solid #00b0f2;
+}
+.wizard-steps .active-step .a-after {
+  border-left: 20px solid #00b0f2;
+}

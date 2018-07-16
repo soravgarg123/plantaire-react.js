@@ -1,0 +1,56 @@
+.covers-form .field-string{
+ padding: 10px;
+}
+.covers-form select{
+  display: inline-block;
+  width: 65%;
+  background-color: #06569b;
+  color: #fff;
+  font-size: 16px;
+}
+.covers-form label:first-child{
+  font-size: 18px;
+  margin-left: 15px;
+  margin-top: 20px;
+  border-bottom: 1px #000 solid;
+}
+.covers-form .cover-subsection{
+  min-height: 200px;
+  border-bottom: 5px #fff solid;
+}
+
+.covers-form .cover-subsection .cover-subsection-lenght label, 
+.covers-form .cover-subsection .cover-subsection-material label{
+  font-size: 16px;
+  border-bottom: 0px;
+  margin: 0px;
+  display: inline-block;
+  width: 35%;
+}
+.covers-form .cover-subsection .cover-subsection-lenght div,
+.covers-form .cover-subsection .cover-subsection-material div{
+  font-size: 12px;
+  display: inline-block;
+}
+
+.covers-form .cover-subsection .cover-subsection-lenght label::before, 
+.covers-form .cover-subsection .cover-subsection-material label::before{
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: rgb(52, 52, 52);
+  display: block;
+  border-radius: 50%;
+  float: left;
+  position: relative;
+  top: 10px;
+  margin-right: 20px;
+}
+
+.covers-form .middlelayer{
+  border-bottom: 2px #fff solid;
+}
+
+.covers-form .bottomcover{
+  border-bottom: 0px;
+}

@@ -1,0 +1,62 @@
+.customRight .checkbox input[type=checkbox],.content-left .checkbox input[type=checkbox]{
+     position: static;
+     margin-left: 0;
+     margin-right: 6px;
+ }
+ .content-right.customRight.col-md-4.col-xs-4{
+ 	position: relative;
+ }
+ .content-right.customRight.col-md-4.col-xs-4 label.left-lbl {
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    color: #fff;
+}
+.content-right.customRight.col-md-4.col-xs-4 label.left-lbl input[type="checkbox"] {
+    position: relative;
+    top: 2px;
+}
+label,label span {
+    font-size: 15px !important;
+    font-weight: 500 !important;
+}
+input[type=checkbox]{
+	width: auto !important;
+	float: none !important;
+}
+.content-right input[type="text"],.content-right select,.customLeft select,.customLeft input[type="text"]{
+    float: right;
+    width: 35% !important;
+    background: #06569b;
+    color: #fff;
+}
+.patient-tab-content-infos form.rjsf input.form-control, .patient-tab-content-infos form.rjsf select.form-control {
+    width: 50% !important;
+    float: right;
+}
+.field-range-wrapper {
+    margin-right: 15px;
+}
+.covers-form .cover-subsection {
+    min-height: inherit !important;
+    border-bottom: 5px #fff solid;
+    padding-bottom: 10px;
+}
+.addons-form-area form.rjsf input.form-control, .addons-form-area form.rjsf select.form-control {
+    width: 65% !important;
+    margin-right: 15px;
+}
+.addons-form-area .pads {
+   min-height: inherit !important;
+}
+.patient-tab-content-infos form.rjsf .form-group.field.field-boolean.infos_asymetrie_schema .checkbox {
+    margin-right: 28%;
+    display: block;
+}
+.patient-tab-content-infos form.rjsf .field-radio-group {
+    margin-left: 12%;
+}
+.patient-tab-content-infos form.rjsf .infos_gender_schema {
+    margin-top: 10px !important;
+    width: 100%;
+}

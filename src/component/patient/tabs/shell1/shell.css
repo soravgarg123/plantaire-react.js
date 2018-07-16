@@ -1,0 +1,197 @@
+.label-left label {
+    display: inline-block;
+    width: 30%;
+}
+.label-left div {
+    display: inline-block;
+}
+  .label-left input,
+  .label-left textarea,
+  .label-left select {
+    display: inline-block;
+    width: 70%;
+    max-width: 65%;
+    vertical-align: top;
+  }
+
+.form-group.field.field-number.label-left.shell-exclusions {
+  padding: 10px 15px;
+  font-size: 18px;
+}
+input#root_exclusions {
+  width: 35%;
+  float: right;
+  background-color: #06569b;
+  color: #fff;
+}
+.form-group.field.field-string.label-left.shell-angulation {
+  padding: 10px 15px;
+  font-size: 18px;
+}
+select#root_angulation {
+  width: 35%;
+  float: right;
+  background-color: #06569b;
+  color: #fff;
+}
+.form-group.field.field-string.label-left.shell-angle {
+  padding: 10px 15px;
+  font-size: 18px;
+  border-bottom: solid 5px #fff;
+}
+select#root_angle {
+  width: 35%;
+  float: right;
+  background-color: #06569b;
+  color: #fff;
+}
+
+.form-group.field.field-boolean.shell-lateral > .checkbox > label {
+  width: 100%;
+  font-size: 18px;
+  padding-left: 15px !important;
+  padding-right: 15px;
+}
+.form-group.field.field-boolean.shell-lateral > .checkbox > label > input {
+  position: inherit;
+  float: none;
+  width: auto;
+}
+.form-group.field.field-boolean.shell-lateral > .checkbox > label > span {
+  font-weight: 700;
+}
+
+.form-group.field.field-boolean.shell-offsetlateralarch > .checkbox > label {
+  width: 100%;
+  font-size: 18px;
+  padding-left: 15px !important;
+  padding-right: 15px;
+}
+input#root_offsetlateralarch {
+  position: inherit;
+  float: right;
+  width: 20%;
+}
+.form-group.field.field-boolean.shell-offsetlateralarch > .checkbox > label > span {
+  font-weight: 700;
+}
+
+.form-group.field.field-boolean.shell-offsetmedialarch > .checkbox > label {
+  width: 100%;
+  font-size: 18px;
+  padding-left: 15px !important;
+  padding-right: 15px;
+}
+input#root_offsetmedialarch {
+  position: inherit;
+  float: none;
+  width: auto;
+}
+.form-group.field.field-boolean.shell-offsetmedialarch > .checkbox > label > span {
+  font-weight: 700;
+}
+
+.form-group.field.field-boolean.shell-fascialaccomodation > .checkbox > label {
+  width: 100%;
+  font-size: 18px;
+  padding-left: 15px !important;
+  padding-right: 15px;
+}
+input#root_fascialaccomodation {
+  position: inherit;
+  float: right;
+  width: 20%;
+}
+.form-group.field.field-boolean.shell-fascialaccomodation > .checkbox > label > span {
+  font-weight: 700;
+}
+
+.form-group.field.field-boolean.shell-navicularaccomodation > .checkbox > label {
+  width: 100%;
+  font-size: 18px;
+  padding-left: 15px !important;
+  padding-right: 15px;
+}
+input#root_navicularaccomodation {
+  position: inherit;
+  float: right;
+  width: 20%;
+}
+.form-group.field.field-boolean.shell-navicularaccomodation > .checkbox > label > span {
+  font-weight: 700;
+}
+
+.form-group.field.field-boolean.shell-heelhole > .checkbox > label {
+  width: 100%;
+  font-size: 18px;
+  padding-left: 15px !important;
+  padding-right: 15px;
+}
+input#root_heelhole {
+  position: inherit;
+  float: right;
+  width: 20%;
+}
+.form-group.field.field-boolean.shell-heelhole > .checkbox > label > span {
+  font-weight: 700;
+}
+
+.form-group.field.field-string.label-left.shell-height{
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+select#root_height {
+  width: 35%;
+  float: right;
+  background-color: #06569b;
+  color: #fff;
+}
+.form-group.field.field-string.label-left.shell-width {
+  padding: 10px 15px;
+  font-size: 18px;
+  border-bottom:solid 2px #fff;
+}
+select#root_width {
+  width: 25%;
+  float: right;
+  background-color: #06569b;
+  color: #fff;
+  
+}
+.form-group.field.field-string.label-left.shell-heelflare {
+  padding: 10px 15px;
+  font-size: 18px;
+}
+select#root_heelflare {
+  width: 25%;
+  float: right;
+  background-color: #06569b;
+  color: #fff;
+}
+.form-group.field.field-string.label-left.shell-heelcupheight {
+  padding: 10px 15px;
+  font-size: 18px;
+}
+.form-group.field.field-string.label-left.shell-heelcupheight > label {
+  width: 45%;
+}
+select#root_heelcupheight {
+  width: 35%;
+  float: right;
+  background-color: #06569b;
+  color: #fff;
+}
+.form-group.field.field-string.label-left.shell-heelelevation {
+  padding: 10px 15px;
+  font-size: 18px;
+}
+.form-group.field.field-string.label-left.shell-heelelevation > label {
+  width: 45%;
+}
+.shell-heelelevation #root_heelelevation{
+  width: 35%;
+  float: right;
+  background-color: #06569b;
+  color: #fff;
+}

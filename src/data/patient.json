@@ -1,0 +1,1683 @@
+{
+  "tabs": [
+    "infos",
+    "shell",
+    "addons",
+    "covers",
+    "rigidity",
+    "summary"
+  ],
+  "infos": {
+    "title": "Infos",
+    "schema": {
+      "jsonschema": {
+        "type": "object",
+        "required": [
+          "firstName",
+          "lastName",
+          "weight",
+          "empreinte",
+          "gender"
+        ],
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "title": "First name"
+          },
+          "pointure": {
+            "type": "number",
+            "title": "Pointure",
+            "enum": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14
+            ]
+          },
+          "lastName": {
+            "type": "string",
+            "title": "Last name"
+          },
+          "empreinte": {
+            "type": "string",
+            "title": "Empreinte",
+            "enum": [
+              "default",
+              "plastercast",
+              "option1",
+              "option2"
+            ],
+            "enumNames": [
+              "-Choose-",
+              "Plaster cast",
+              "Foam box",
+              "Foot scan"
+            ]
+          },
+          "age": {
+            "type": "integer",
+            "title": "Age"
+          },
+          "asymetrie": {
+            "type": "boolean",
+            "title": "Asymétrie"
+          },
+          "weight": {
+            "type": "number",
+            "title": "Weight"
+          },
+          "symetriecomme": {
+            "type": "string",
+            "title": "Symétrie comme",
+            "enum": [
+              "option1",
+              "option2"
+            ],
+            "enumNames": [
+              "Left",
+              "Right"
+            ]
+          },
+          "gender": {
+            "type": "string",
+            "title": "Gender",
+            "enum": [
+              "male",
+              "female"
+            ],
+            "enumNames": [
+              "M",
+              "F"
+            ]
+          }
+        }
+      },
+      "uischema": {
+        "firstName": {
+          "ui:autofocus": true,
+          "ui:emptyValue": "",
+          "classNames": "infos_firstname_schema"
+        },
+        "pointure": {
+          "classNames": "infos_pointure_schema"
+        },
+        "lastName": {
+          "classNames": "infos_lastname_schema"
+        },
+        "age": {
+          "ui:widget": "updown",
+          "classNames": "infos_age_schema"
+        },
+        "weight": {
+          "classNames": "infos_weight_schema"
+        },
+        "gender": {
+          "ui:widget": "radio",
+          "ui:options": {
+            "inline": true
+          },
+          "classNames": "infos_gender_schema"
+        },
+        "empreinte": {
+          "classNames": "infos_empreinte_schema"
+        },
+        "asymetrie": {
+          "classNames": "infos_asymetrie_schema"
+        },
+        "symetriecomme": {
+          "classNames": "infos_symetriecomme_schema"
+        }
+      }
+    },
+    "pretab": null
+  },
+  "shell": {
+    "title": "Shell",
+    "isToggleOn":true,
+    "schema": {
+      "jsonschema": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "exclusions": {
+            "type": "number",
+            "title": "Exclusions",
+            "default": 5
+          },
+          "exclusions1": {
+            "type": "number",
+            "title": "Exclusions1",
+            "default": 2
+          },
+          "angulation": {
+            "type": "string",
+            "title": "Angulation",
+            "enum": [
+              "Neutral",
+              "Varus",
+              "Valgus"
+            ],
+            "default": "Neutral"
+          },
+          "angulation1": {
+            "type": "string",
+            "title": "Angulation1",
+            "enum": [
+              "Neutral",
+              "Varus",
+              "Valgus"
+            ],
+            "default": "Neutral"
+          },
+          "angle": {
+            "type": "string",
+            "title": "Angle",
+            "enum": [
+              "1°",
+              "2°",
+              "3°",
+              "4°"
+            ]
+          },
+          "angle1": {
+            "type": "string",
+            "title": "Angle1",
+            "enum": [
+              "1°",
+              "2°",
+              "3°",
+              "4°"
+            ]
+          },
+          "lateralwall": {
+            "type": "boolean",
+            "title": "Lateral wall"
+          },
+          "lateralwall1": {
+            "type": "boolean",
+            "title": "Lateral wall1"
+          },
+          "height": {
+            "type": "string",
+            "title": "Height",
+            "enum": [
+              "1mm",
+              "2mm",
+              "3mm",
+              "4mm",
+              "5mm"
+            ]
+          },
+          "height1": {
+            "type": "string",
+            "title": "Height1",
+            "enum": [
+              "1mm",
+              "2mm",
+              "3mm",
+              "4mm",
+              "5mm"
+            ]
+          },
+          "offsetmedialarch": {
+            "type": "boolean",
+            "title": "Offset medial arch"
+          },
+          "offsetmedialarch1": {
+            "type": "boolean",
+            "title": "Offset medial arch1"
+          },
+          "fascialaccomodation": {
+            "type": "boolean",
+            "title": "Fascia accomodation"
+          },
+          "fascialaccomodation1": {
+            "type": "boolean",
+            "title": "Fascia accomodation1"
+          },
+          "navicularaccomodation": {
+            "type": "boolean",            
+            "title": "Navicular accomodation"
+          },
+          "navicularaccomodation1": {
+            "type": "boolean",            
+            "title": "Navicular accomodation1"
+          },
+          "width": {
+            "type": "string",
+            "title": "Width",
+            "enum": [
+              "S",
+              "M",
+              "R"
+            ],
+            "default" : "M"
+          },
+          "width1": {
+            "type": "string",
+            "title": "Width1",
+            "enum": [
+              "S",
+              "M",
+              "R"
+            ],
+            "default" : "M"
+          },
+          "heelflare": {
+            "type": "string",
+            "title": "Heel flare",
+            "enum": [
+              "N",
+              "M",
+              "L"
+            ],
+            "default" : "M"
+          },
+          "heelflare1": {
+            "type": "string",
+            "title": "Heel flare1",
+            "enum": [
+              "N",
+              "M",
+              "L"
+            ],
+            "default" : "M"
+          },
+          "heelcupheight": {
+            "type": "string",
+            "title": "Heel cup height",
+            "enum": [
+              "10 mm",
+              "15 mm",
+              "20 mm"
+            ],
+            "default" : "15 mm"
+          },
+          "heelcupheight1": {
+            "type": "string",
+            "title": "Heel cup height1",
+            "enum": [
+              "10 mm",
+              "15 mm",
+              "20 mm"
+            ],
+            "default" : "15 mm"
+          },
+          "heelhole": {
+            "type": "boolean",
+            "title": "Heel hole"
+          },
+          "heelhole1": {
+            "type": "boolean",
+            "title": "Heel hole1"
+          },
+          "heelelevation": {
+            "type": "string",
+            "title": "Heel elevation",
+            "enum": [
+              "1 mm",
+              "2 mm"
+            ]
+          },
+          "heelelevation1": {
+            "type": "string",
+            "title": "Heel elevation1",
+            "enum": [
+              "1 mm",
+              "2 mm"
+            ]
+          }
+        }
+      },
+      "uischema": {
+        "ui:field": "layout",
+        "exclusions": {
+          "classNames": "label-left shell-exclusions"
+        },
+        "angulation": {
+          "classNames": "label-left shell-angulation"
+        },
+        "angle": {
+          "classNames": "label-left shell-angle"
+        },
+        "lateralwall": {
+          "classNames": " shell-lateral"
+        },
+        "height": {
+          "classNames": "label-left shell-height"
+        },
+        "offsetmedialarch": {
+          "classNames": "shell-offsetmedialarch"
+        },
+        "fascialaccomodation": {
+          "classNames": "shell-fascialaccomodation"
+        },
+        "navicularaccomodation": {
+          "classNames": "shell-navicularaccomodation"
+        },
+        "width": {
+          "classNames": "label-left shell-width"
+        },
+        "heelflare": {
+          "classNames": "label-left shell-heelflare"
+        },
+        "heelcupheight": {
+          "classNames": "label-left shell-heelcupheight"
+        },
+        "heelhole": {
+          "classNames": " shell-heelhole"
+        },
+        "heelelevation": {
+          "classNames": "label-left shell-heelelevation"
+        },
+        "ui:layout": [
+          {
+            "exclusions": {},
+            "angulation": {},
+            "angle": {
+              "doshow": "isChoiceSelected('angulation', 'Neutral', true)"
+            },
+            "lateralwall": {},
+            "height": {
+              "doshow": "isTrue('lateralwall')"
+            },
+            "offsetmedialarch": {},
+            "fascialaccomodation": {},
+            "navicularaccomodation": {},
+            "width": {},
+            "heelflare": {},
+            "heelcupheight": {},
+            "heelhole": {},
+            "heelelevation": {},
+            "lastName": {
+              "doshow": "isFilled('firstName')"
+            }
+          }
+        ]
+      }
+    },
+    "pretab": "infos"
+  },
+
+
+  "shell1": {
+    "title": "Shell1",
+    "schema": {
+      "jsonschema": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "exclusions1": {
+            "type": "number",
+            "title": "Exclusions",
+            "default": 2
+          },
+          "angulation1": {
+            "type": "string",
+            "title": "Angulation",
+            "enum": [
+              "Neutral",
+              "Varus",
+              "Valgus"
+            ],
+            "default": "Neutral"
+          },
+          "angle1": {
+            "type": "string",
+            "title": "Angle",
+            "enum": [
+              "1°",
+              "2°",
+              "3°",
+              "4°"
+            ]
+          },
+          "lateralwall1": {
+            "type": "boolean",
+            "title": "Lateral wall"
+          },
+          "height1": {
+            "type": "string",
+            "title": "Height",
+            "enum": [
+              "1mm",
+              "2mm",
+              "3mm",
+              "4mm",
+              "5mm"
+            ]
+          },
+          "offsetmedialarch1": {
+            "type": "boolean",
+            "title": "Offset medial arch"
+          },
+          "fascialaccomodation1": {
+            "type": "boolean",
+            "title": "Fascia accomodation"
+          },
+          "navicularaccomodation1": {
+            "type": "boolean",            
+            "title": "Navicular accomodation"
+          },
+          "width1": {
+            "type": "string",
+            "title": "Width",
+            "enum": [
+              "S",
+              "M",
+              "R"
+            ],
+            "default" : "M"
+          },
+          "heelflare1": {
+            "type": "string",
+            "title": "Heel flare",
+            "enum": [
+              "N",
+              "M",
+              "L"
+            ],
+            "default" : "M"
+          },
+          "heelcupheight1": {
+            "type": "string",
+            "title": "Heel cup height",
+            "enum": [
+              "10 mm",
+              "15 mm",
+              "20 mm"
+            ],
+            "default" : "15 mm"
+          },
+          "heelhole1": {
+            "type": "boolean",
+            "title": "Heel hole"
+          },
+          "heelelevation1": {
+            "type": "string",
+            "title": "Heel elevation",
+            "enum": [
+              "1 mm",
+              "2 mm"
+            ]
+          }
+        }
+      },
+      "uischema": {
+        "ui:field": "layout",
+        "exclusions1": {
+          "classNames": "label-left shell-exclusions"
+        },
+        "angulation1": {
+          "classNames": "label-left shell-angulation"
+        },
+        "angle1": {
+          "classNames": "label-left shell-angle"
+        },
+        "lateralwall1": {
+          "classNames": " shell-lateral"
+        },
+        "height1": {
+          "classNames": "label-left shell-height"
+        },
+        "offsetmedialarch1": {
+          "classNames": "shell-offsetmedialarch"
+        },
+        "fascialaccomodation1": {
+          "classNames": "shell-fascialaccomodation"
+        },
+        "navicularaccomodation1": {
+          "classNames": "shell-navicularaccomodation"
+        },
+        "width1": {
+          "classNames": "label-left shell-width"
+        },
+        "heelflare1": {
+          "classNames": "label-left shell-heelflare"
+        },
+        "heelcupheight1": {
+          "classNames": "label-left shell-heelcupheight"
+        },
+        "heelhole1": {
+          "classNames": " shell-heelhole"
+        },
+        "heelelevation1": {
+          "classNames": "label-left shell-heelelevation"
+        },
+        "ui:layout": [
+          {
+            "exclusions1": {},
+            "angulation1": {},
+            "angle1": {
+              "doshow": "isChoiceSelected('angulation1', 'Neutral', true)"
+            },
+            "lateralwall1": {},
+            "height1": {
+              "doshow": "isTrue('lateralwall1')"
+            },
+            "offsetmedialarch1": {},
+            "fascialaccomodation1": {},
+            "navicularaccomodation1": {},
+            "width1": {},
+            "heelflare1": {},
+            "heelcupheight1": {},
+            "heelhole1": {},
+            "heelelevation1": {},
+            "lastName": {
+              "doshow": "isFilled('firstName')"
+            }
+          }
+        ]
+      }
+    },
+    "pretab": ""
+  },
+
+
+
+
+  "addons": {
+    "title": "Add-ons",
+    "schema": {
+      "jsonschema": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "ext_iso": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Extensions",
+                "Isolations"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "ext_iso1": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Extensions",
+                "Isolations"
+              ]
+            },
+            "uniqueItems": true
+          },
+          "position": {
+            "type": "string",
+            "title": "Position"
+          },
+          "position1": {
+            "type": "string",
+            "title": "Position1"
+          },
+          "material": {
+            "type": "string",
+            "title": "Material",
+            "enum": [
+              "Poron médical 2mm",
+              "PPT 2mm",
+              "PPT 3mm",
+              "PPT 4mm",
+              "Expertène 1.5mm",
+              "Viscotène 2.5mm",
+              "PodiEVA70 1mm",
+              "PodiEVA70 2mm",
+              "PodiEVA70 3mm",
+              "PodiEVA70 4mm"
+            ]
+          },
+          "material1": {
+            "type": "string",
+            "title": "Material1",
+            "enum": [
+              "Poron médical 2mm",
+              "PPT 2mm",
+              "PPT 3mm",
+              "PPT 4mm",
+              "Expertène 1.5mm",
+              "Viscotène 2.5mm",
+              "PodiEVA70 1mm",
+              "PodiEVA70 2mm",
+              "PodiEVA70 3mm",
+              "PodiEVA70 4mm"
+            ]
+          },
+          "lenght": {
+            "type": "string",
+            "title": "Lenght",
+            "enum": [
+              "5 mm",
+              "Meta",
+              "Sulcus",
+              "Total"
+            ]
+          },
+          "lenght1": {
+            "type": "string",
+            "title": "Lenght1",
+            "enum": [
+              "5 mm",
+              "Meta",
+              "Sulcus",
+              "Total"
+            ]
+          },
+          "fillisolation": {
+            "type": "string",
+            "title": "Fill isolation",
+            "enum": [
+              "Poron médical 2mm",
+              "PPT 2mm",
+              "PPT 3mm",
+              "PPT 4mm",
+              "ConfortEVA 2.5mm"
+            ]
+          },
+          "fillisolation1": {
+            "type": "string",
+            "title": "Fill isolation1",
+            "enum": [
+              "Poron médical 2mm",
+              "PPT 2mm",
+              "PPT 3mm",
+              "PPT 4mm",
+              "ConfortEVA 2.5mm"
+            ]
+          },
+          "pads": {
+            "type": "string",
+            "title": "Pads",
+            "enum": [
+              "Option 1",
+              "Option 2"
+            ]
+          },
+          "pads1": {
+            "type": "string",
+            "title": "Pads1",
+            "enum": [
+              "Option 1",
+              "Option 2"
+            ]
+          },
+          "heelelevation": {
+            "type": "string",
+            "title": "Heel elevation",
+            "enum": [
+              "1mm",
+              "2mm",
+              "3mm",
+              "4mm"
+            ]
+          },
+          "heelelevation1": {
+            "type": "string",
+            "title": "Heel elevation1",
+            "enum": [
+              "1mm",
+              "2mm",
+              "3mm",
+              "4mm"
+            ]
+          },
+          "heelelevationmaterial": {
+            "type": "string",
+            "title": "Material",
+            "enum": [
+              "Jogtene",
+              "Option 1",
+              "Option 2"
+            ]
+          },
+          "heelelevationmaterial1": {
+            "type": "string",
+            "title": "Material1",
+            "enum": [
+              "Jogtene",
+              "Option 1",
+              "Option 2"
+            ]
+          },
+          "fillheelhole": {
+            "type": "string",
+            "title": "Fill heel hole",
+            "enum": [
+              "Noene",
+              "Option 1",
+              "Option 2"
+            ]
+          },
+          "fillheelhole1": {
+            "type": "string",
+            "title": "Fill heel hole1",
+            "enum": [
+              "Noene",
+              "Option 1",
+              "Option 2"
+            ]
+          }
+        }
+      },
+      "uischema": {
+        "ui:field": "layout",
+        "ext_iso": {
+          "ui:widget": "checkboxes",
+          "ui:options": {
+            "inline": true
+          },
+          "ui:title": " "
+        },
+        "position": {
+          "classNames": "label-left position"
+        },
+        "material": {
+          "classNames": "label-left material"
+        },
+        "lenght": {
+          "classNames": "label-left lenght"
+        },
+        "fillisolation": {
+          "classNames": "label-left fillisolation"
+        },
+        "pads": {
+          "classNames": "label-left pads"
+        },
+        "heelelevation": {
+          "classNames": "label-left heelelevation"
+        },
+        "heelelevationmaterial": {
+          "classNames": "label-left heelelevationmaterial"
+        },
+        "fillheelhole": {
+          "classNames": "label-left fillheelhole"
+        },
+        "ui:layout": [
+          {
+            "position": {
+              "doshow": "isFilled('ext_iso')"
+            },
+            "material": {
+              "doshow": "isFilled('ext_iso')"
+            },
+            "lenght": {
+              "doshow": "isFilled('ext_iso')"
+            },
+            "fillisolation": {
+              "doshow": "isChoiceSelected('ext_iso', 'Isolations')"
+            },
+            "pads": {},
+            "heelelevation": {},
+            "heelelevationmaterial": {
+              "doshow": "isFilled('heelelevation')"
+            },
+            "fillheelhole": {
+              "doshow": "preparePreFormData('heelhole')"
+            }
+          }
+        ]
+      }
+    },
+    "pretab": "shell"
+  },
+
+
+  "addons1": {
+    "title": "Add-ons",
+    "schema": {
+      "jsonschema": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "ext_iso1": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "Extensions",
+                "Isolations"
+              ],
+              "default": "Extensions"
+            },
+            "uniqueItems": true
+          },
+          "position1": {
+            "type": "string",
+            "title": "Position"
+          },
+          "material1": {
+            "type": "string",
+            "title": "Material",
+            "enum": [
+              "Poron médical 2mm",
+              "PPT 2mm",
+              "PPT 3mm",
+              "PPT 4mm",
+              "Expertène 1.5mm",
+              "Viscotène 2.5mm",
+              "PodiEVA70 1mm",
+              "PodiEVA70 2mm",
+              "PodiEVA70 3mm",
+              "PodiEVA70 4mm"
+            ]
+          },
+          "lenght1": {
+            "type": "string",
+            "title": "Lenght",
+            "enum": [
+              "5 mm",
+              "Meta",
+              "Sulcus",
+              "Total"
+            ]
+          },
+          "fillisolation1": {
+            "type": "string",
+            "title": "Fill isolation",
+            "enum": [
+              "Poron médical 2mm",
+              "PPT 2mm",
+              "PPT 3mm",
+              "PPT 4mm",
+              "ConfortEVA 2.5mm"
+            ]
+          },
+          "pads1": {
+            "type": "string",
+            "title": "Pads",
+            "enum": [
+              "Option 1",
+              "Option 2"
+            ]
+          },
+          "heelelevation1": {
+            "type": "string",
+            "title": "Heel elevation",
+            "enum": [
+              "1mm",
+              "2mm",
+              "3mm",
+              "4mm"
+            ]
+          },
+          "heelelevationmaterial1": {
+            "type": "string",
+            "title": "Material",
+            "enum": [
+              "Jogtene",
+              "Option 1",
+              "Option 2"
+            ]
+          },
+          "fillheelhole1": {
+            "type": "string",
+            "title": "Fill heel hole",
+            "enum": [
+              "Noene",
+              "Option 1",
+              "Option 2"
+            ]
+          }
+        }
+      },
+      "uischema": {
+        "ui:field": "layout",
+        "ext_iso1": {
+          "ui:widget": "checkboxes",
+          "ui:options": {
+            "inline": true
+          },
+          "ui:title": " "
+        },
+        "position1": {
+          "classNames": "label-left position"
+        },
+        "material1": {
+          "classNames": "label-left material"
+        },
+        "lenght1": {
+          "classNames": "label-left lenght"
+        },
+        "fillisolation1": {
+          "classNames": "label-left fillisolation"
+        },
+        "pads1": {
+          "classNames": "label-left pads"
+        },
+        "heelelevation1": {
+          "classNames": "label-left heelelevation"
+        },
+        "heelelevationmaterial1": {
+          "classNames": "label-left heelelevationmaterial"
+        },
+        "fillheelhole1": {
+          "classNames": "label-left fillheelhole"
+        },
+        "ui:layout": [
+          {
+            "position1": {
+              "doshow": "isFilled('ext_iso1')"
+            },
+            "material1": {
+              "doshow": "isFilled('ext_iso1')"
+            },
+            "lenght1": {
+              "doshow": "isFilled('ext_iso1')"
+            },
+            "fillisolation1": {
+              "doshow": "isChoiceSelected('ext_iso1', 'Isolations')"
+            },
+            "pads1": {},
+            "heelelevation1": {},
+            "heelelevationmaterial1": {
+              "doshow": "isFilled('heelelevation')"
+            },
+            "fillheelhole1": {
+              "doshow": "preparePreFormData('heelhole')"
+            }
+          }
+        ]
+      }
+    },
+    "pretab": ""
+  },
+
+
+
+  "covers": {
+    "title": "Covers",
+    "pretab": "addons",
+    "schema": {
+      "jsonschema": {
+        "definitions": {
+          "topcover": {
+            "type": "object",
+            "properties": {
+              "material": {
+                "type": "string",
+                "title": "Material",
+                "enum": [
+                  "-- Vinyles --",
+                  "Micro perforé noir",
+                  "Tan",
+                  "Gris",
+                  "-- Leather --",
+                  "Noir",
+                  "-- EVA --",
+                  "ConfortEVA 2.5mm",
+                  "EVAmic Ar 2.5mm",
+                  "-- Techno --",
+                  "AMF     0.7mm",
+                  "IonMesh 0.6mm",
+                  "Spenco  2.5mm"
+                ]
+              },
+              
+              "lenght": {
+                "type": "string",
+                "title": "Lenght",
+                "enum": [
+                  "Total",
+                  "Sulcus",
+                  "Shell (3/4)"
+                ]
+              }
+            }
+          },
+          "middlelayer": {
+            "type": "object",
+            "properties": {
+              "material": {
+                "type": "string",
+                "title": "Material",
+                "enum": [
+                  "-- Dynamic --",
+                  "Expertène  1.5mm",
+                  "-- EVA --",
+                  "ConfortEVA 2.5mm",
+                  "EVAmic Ar 2.5mm",
+                  "-- Specialized --",
+                  "Poron médical 2mm",
+                  "PPT 2mm",
+                  "PPT 3mm",
+                  "PPT 4mm"
+                ]
+              },
+              "lenght": {
+                "type": "string",
+                "title": "Lenght",
+                "enum": [
+                  "Total",
+                  "Sulcus",
+                  "Shell (3/4)"
+                ]
+              }
+            }
+          },
+          "bottomcover": {
+            "type": "object",
+            "properties": {
+              "material": {
+                "type": "string",
+                "title": "Material",
+                "enum": [
+                  "-- Caoutchouc --",
+                  "Viscotène 2.5mm",
+                  "-- EVA --",
+                  "PodiEVA70 1mm",
+                  "PodiEVA70 2mm",
+                  "PodiEVA70 3mm",
+                  "PodiEVA70 4mm"
+                ]
+              },
+              "lenght": {
+                "type": "string",
+                "title": "Lenght",
+                "enum": [
+                  "Total",
+                  "Sulcus",
+                  "Shell (3/4)"
+                ]
+              }
+            }
+          }
+        },
+        "type": "object",
+        "properties": {
+          "topcover": {
+            "title": "Top Cover",
+            "$ref": "#/definitions/topcover"
+          },
+          "middlelayer": {
+            "title": "Middle layer",
+            "$ref": "#/definitions/middlelayer"
+          },
+          "bottomcover": {
+            "title": "Bottom cover",
+            "$ref": "#/definitions/bottomcover"
+          }
+        }
+      },
+      "uischema": {
+        "topcover": {
+          "classNames": "cover-subsection",
+          "material": {
+            "classNames": "cover-subsection-material",
+            "ui:enumDisabled": [
+              "-- Vinyles --",
+              "-- EVA --",
+              "-- Leather --",
+              "-- Specialized --",
+              "-- Dynamic --",
+              "-- Caoutchouc --",
+              "-- Techno --"
+            ]
+          },
+          "lenght": {
+            "classNames": "cover-subsection-lenght"
+          }
+        },
+        "middlelayer": {
+          "classNames": "cover-subsection middlelayer",
+          "material": {
+            "classNames": "cover-subsection-material",
+            "ui:enumDisabled": [
+              "-- Vinyles --",
+              "-- EVA --",
+              "-- Leather --",
+              "-- Specialized --",
+              "-- Dynamic --",
+              "-- Caoutchouc --",
+              "-- Techno --"
+            ]
+          },
+          "lenght": {
+            "classNames": "cover-subsection-lenght"
+          }
+        },
+        "bottomcover": {
+          "classNames": "cover-subsection bottomcover",
+          "material": {
+            "classNames": "cover-subsection-material",
+            "ui:enumDisabled": [
+              "-- Vinyles --",
+              "-- EVA --",
+              "-- Leather --",
+              "-- Specialized --",
+              "-- Dynamic --",
+              "-- Caoutchouc --",
+              "-- Techno --"
+            ]
+          },
+          "lenght": {
+            "classNames": "cover-subsection-lenght"
+          }
+        }
+      }
+    }
+  },
+
+  "covers1": {
+    "title": "Covers",
+    "pretab": "",
+    "schema": {
+      "jsonschema": {
+        "definitions": {
+          "topcover": {
+            "type": "object",
+            "properties": {
+              "material1": {
+                "type": "string",
+                "title": "Material",
+                "enum": [
+                  "-- Vinyles --",
+                  "Micro perforé noir",
+                  "Tan",
+                  "Gris",
+                  "-- Leather --",
+                  "Noir",
+                  "-- EVA --",
+                  "ConfortEVA 2.5mm",
+                  "EVAmic Ar 2.5mm",
+                  "-- Techno --",
+                  "AMF     0.7mm",
+                  "IonMesh 0.6mm",
+                  "Spenco  2.5mm"
+                ]
+              },
+              "lenght1": {
+                "type": "string",
+                "title": "Lenght",
+                "enum": [
+                  "Total",
+                  "Sulcus",
+                  "Shell (3/4)"
+                ]
+              }
+            }
+          },
+          "middlelayer": {
+            "type": "object",
+            "properties": {
+              "material1": {
+                "type": "string",
+                "title": "Material",
+                "enum": [
+                  "-- Dynamic --",
+                  "Expertène  1.5mm",
+                  "-- EVA --",
+                  "ConfortEVA 2.5mm",
+                  "EVAmic Ar 2.5mm",
+                  "-- Specialized --",
+                  "Poron médical 2mm",
+                  "PPT 2mm",
+                  "PPT 3mm",
+                  "PPT 4mm"
+                ]
+              },
+              "lenght1": {
+                "type": "string",
+                "title": "Lenght",
+                "enum": [
+                  "Total",
+                  "Sulcus",
+                  "Shell (3/4)"
+                ]
+              }
+            }
+          },
+          "bottomcover": {
+            "type": "object",
+            "properties": {
+              "material1": {
+                "type": "string",
+                "title": "Material",
+                "enum": [
+                  "-- Caoutchouc --",
+                  "Viscotène 2.5mm",
+                  "-- EVA --",
+                  "PodiEVA70 1mm",
+                  "PodiEVA70 2mm",
+                  "PodiEVA70 3mm",
+                  "PodiEVA70 4mm"
+                ]
+              },
+              "lenght1": {
+                "type": "string",
+                "title": "Lenght",
+                "enum": [
+                  "Total",
+                  "Sulcus",
+                  "Shell (3/4)"
+                ]
+              }
+            }
+          }
+        },
+        "type": "object",
+        "properties": {
+          "topcover": {
+            "title": "Top Cover",
+            "$ref": "#/definitions/topcover"
+          },
+          "middlelayer": {
+            "title": "Middle layer",
+            "$ref": "#/definitions/middlelayer"
+          },
+          "bottomcover": {
+            "title": "Bottom cover",
+            "$ref": "#/definitions/bottomcover"
+          }
+        }
+      },
+      "uischema": {
+        "topcover": {
+          "classNames": "cover-subsection",
+          "material1": {
+            "classNames": "cover-subsection-material",
+            "ui:enumDisabled": [
+              "-- Vinyles --",
+              "-- EVA --",
+              "-- Leather --",
+              "-- Specialized --",
+              "-- Dynamic --",
+              "-- Caoutchouc --",
+              "-- Techno --"
+            ]
+          },
+          "lenght1": {
+            "classNames": "cover-subsection-lenght"
+          }
+        },
+        "middlelayer": {
+          "classNames": "cover-subsection middlelayer",
+          "material1": {
+            "classNames": "cover-subsection-material",
+            "ui:enumDisabled": [
+              "-- Vinyles --",
+              "-- EVA --",
+              "-- Leather --",
+              "-- Specialized --",
+              "-- Dynamic --",
+              "-- Caoutchouc --",
+              "-- Techno --"
+            ]
+          },
+          "lenght1": {
+            "classNames": "cover-subsection-lenght"
+          }
+        },
+        "bottomcover": {
+          "classNames": "cover-subsection bottomcover",
+          "material1": {
+            "classNames": "cover-subsection-material",
+            "ui:enumDisabled": [
+              "-- Vinyles --",
+              "-- EVA --",
+              "-- Leather --",
+              "-- Specialized --",
+              "-- Dynamic --",
+              "-- Caoutchouc --",
+              "-- Techno --"
+            ]
+          },
+          "lenght1": {
+            "classNames": "cover-subsection-lenght"
+          }
+        }
+      }
+    }
+  },
+
+
+  "rigidity": {
+    "title": "Rigidity",
+    "pretab": "covers",
+    "schema": {
+      "jsonschema": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "footflexibility": {
+            "type": "number",
+            "title": "Foot Flexibility",
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "default": 2
+          },
+          "footflexibility1": {
+            "type": "number",
+            "title": "Foot Flexibility1",
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "default": 2
+          },
+          "lateralsupport" :{
+            "title": "Lateral support",
+            "type": "boolean",
+            "default": true
+          },
+          "lateralsupport1" :{
+            "title": "Lateral support1",
+            "type": "boolean",
+            "default": true
+          },
+          "advanced" :{
+            "title": "Advanced",
+            "type": "boolean",
+            "default": false
+          },
+          "advanced1" :{
+            "title": "Advanced1",
+            "type": "boolean",
+            "default": false
+          },
+          "medialarch": {
+            "title": "Medial arch",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "default": 3
+          },
+          "medialarch1": {
+            "title": "Medial arch1",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "default": 3
+          },
+          "medialheel": {
+            "title": "Medial heel",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "default": 3
+          },
+          "medialheel1": {
+            "title": "Medial heel1",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "default": 3
+          },
+          "lateralheel": {
+            "title": "Lateral heel",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "default": 3
+          },
+          "lateralheel1": {
+            "title": "Lateral heel1",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "default": 3
+          },
+          "lateralarch": {
+            "title": "Lateral arch",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "default": 3
+          },
+          "lateralarch1": {
+            "title": "Lateral arch1",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "default": 3
+          }
+        }
+      },
+      "uischema": {
+        "ui:field": "layout",
+        "footflexibility": {
+          "classNames": "label-left position"
+        },
+        "lateralsupport": {
+          "classNames": "rigidity-lateralsupport"
+        },
+        "advanced": {
+          "classNames": "rigidity-lateralsupport"
+        },
+        "medialarch": {
+          "ui:widget": "range"
+        },
+        "medialheel": {
+          "ui:widget": "range"
+        },
+        "lateralheel": {
+          "ui:widget": "range"
+        },
+        "lateralarch": {
+          "ui:widget": "range"
+        },
+        "ui:layout": [
+          {
+            "footflexibility" : {},
+            "lateralsupport" : {},
+            "advanced" : {},
+            "medialarch": {
+              "doshow": "isTrue('advanced')"
+            },
+            "medialheel": {
+              "doshow": "isTrue('advanced')"
+            },
+            "lateralheel": {
+              "doshow": "isTrue('advanced')"
+            },
+            "lateralarch": {
+              "doshow": "isTrue('advanced')"
+            }
+          }
+        ]
+      }
+    },
+    "buttons": {
+      "total": {
+        "label": "Total",
+        "title": "Zone",
+        "classNames": "top-button",
+        "width": "50%"
+      },
+      "lateralarch": {
+        "max": 5,
+        "min": 1,
+        "label": "Lateral arch",
+        "classNames": "inline-button half",
+        "width": "100%"
+      },
+      "medialarch": {
+        "max": 5,
+        "min": 1,
+        "label": "Medial arch",
+        "classNames": "inline-button half",
+        "width": "100%"
+      },
+      "lateralheel": {
+        "max": 5,
+        "min": 1,
+        "label": "Lateral heel",
+        "classNames": "inline-button half",
+        "width": "100%"
+      },
+      "medialheel": {
+        "max": 5,
+        "min": 1,
+        "label": "Medial feel",
+        "classNames": "inline-button half",
+        "width": "100%"
+      }
+    }
+  },
+
+
+  "rigidity1": {
+    "title": "Rigidity",
+    "pretab": "",
+    "schema": {
+      "jsonschema": {
+        "type": "object",
+        "required": [],
+        "properties": {
+          "footflexibility1": {
+            "type": "number",
+            "title": "Foot Flexibility",
+            "enum": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "default": 2
+          },
+          "lateralsupport1" :{
+            "title": "Lateral support",
+            "type": "boolean",
+            "default": true
+          },
+          "advanced1" :{
+            "title": "Advanced",
+            "type": "boolean",
+            "default": false
+          },
+          "medialarch1": {
+            "title": "Medial arch",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "default": 3
+          },
+          "medialheel1": {
+            "title": "Medial heel",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "default": 3
+          },
+          "lateralheel1": {
+            "title": "Lateral heel",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "default": 3
+          },
+          "lateralarch1": {
+            "title": "Lateral arch",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5,
+            "default": 3
+          }
+        }
+      },
+      "uischema": {
+        "ui:field": "layout",
+        "footflexibility1": {
+          "classNames": "label-left position"
+        },
+        "lateralsupport1": {
+          "classNames": "rigidity-lateralsupport"
+        },
+        "advanced1": {
+          "classNames": "rigidity-lateralsupport"
+        },
+        "medialarch1": {
+          "ui:widget": "range"
+        },
+        "medialheel1": {
+          "ui:widget": "range"
+        },
+        "lateralheel1": {
+          "ui:widget": "range"
+        },
+        "lateralarch1": {
+          "ui:widget": "range"
+        },
+        "ui:layout": [
+          {
+            "footflexibility1" : {},
+            "lateralsupport1" : {},
+            "advanced1" : {},
+            "medialarch1": {
+              "doshow": "isTrue('advanced')"
+            },
+            "medialheel1": {
+              "doshow": "isTrue('advanced')"
+            },
+            "lateralheel1": {
+              "doshow": "isTrue('advanced')"
+            },
+            "lateralarch1": {
+              "doshow": "isTrue('advanced')"
+            }
+          }
+        ]
+      }
+    },
+    "buttons": {
+      "total1": {
+        "label": "Total",
+        "title": "Zone",
+        "classNames": "top-button",
+        "width": "50%"
+      },
+      "lateralarch1": {
+        "max": 5,
+        "min": 1,
+        "label": "Lateral arch",
+        "classNames": "inline-button half",
+        "width": "100%"
+      },
+      "medialarch1": {
+        "max": 5,
+        "min": 1,
+        "label": "Medial arch",
+        "classNames": "inline-button half",
+        "width": "100%"
+      },
+      "lateralheel1": {
+        "max": 5,
+        "min": 1,
+        "label": "Lateral heel",
+        "classNames": "inline-button half",
+        "width": "100%"
+      },
+      "medialheel1": {
+        "max": 5,
+        "min": 1,
+        "label": "Medial feel",
+        "classNames": "inline-button half",
+        "width": "100%"
+      }
+    }
+  },
+
+
+  "summary": {
+    "title": "Summary",
+    "pretab": "rigidity"
+  },
+  "c_tab": 0
+}
